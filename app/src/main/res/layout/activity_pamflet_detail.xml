@@ -7,9 +7,18 @@
     tools:context=".Model.PamfletDetail"
     android:orientation="vertical">
 
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar_back_detail"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@color/colorPrimaryDark"
+        tools:ignore="MissingConstraints" />
+
     <ScrollView
         android:id="@+id/scrollView_detail"
         android:layout_width="match_parent"
+        android:layout_marginTop="55dp"
         android:layout_height="0dp"
         android:paddingTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -49,6 +58,7 @@
                     android:layout_marginTop="2dp"
                     android:padding="5dp"
                     android:text="Waktu"
+                    android:textStyle="bold"
                     android:textSize="20dp" />
 
 
@@ -91,6 +101,7 @@
                     android:layout_marginTop="2dp"
                     android:padding="5dp"
                     android:text="Deskripsi Kajian"
+                    android:textStyle="bold"
                     android:textSize="20dp" />
 
 
