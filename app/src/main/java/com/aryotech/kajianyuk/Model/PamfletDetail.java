@@ -1,5 +1,6 @@
 package com.aryotech.kajianyuk.Model;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -16,6 +17,7 @@ public class PamfletDetail extends AppCompatActivity {
     TextView tvDate, tvDesc, tvTime,tvLoc;
     ImageView imgDesc;
     private LayoutInflater itemView;
+    ActionBar actionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,5 +41,19 @@ public class PamfletDetail extends AppCompatActivity {
                 .apply(new RequestOptions().override(300,180))
                 .into(this.imgDesc);
 
+        actionBar = getSupportActionBar();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }
